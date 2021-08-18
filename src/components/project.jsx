@@ -15,16 +15,10 @@ export default function Project(props = {}) {
                 e.preventDefault();
                 updateExpanded(false);
             }}
-            className="project"
+            className={"project " + (Math.floor(Math.random() * 4) >= 3 ? "fat" : "")}
         >
             <h2>{name}</h2>
             <p>{expanded ? description : null}</p>
-            {/* <button
-                onClick={e => {
-                    e.preventDefault();
-                    updateExpanded(!expanded);
-                }}
-            >{expanded ? "Hide" : "Expand"}</button> */}
         </div>
     );
 }

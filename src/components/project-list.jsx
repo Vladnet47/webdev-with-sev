@@ -21,7 +21,8 @@ export default function ProjectList(props = {}) {
     return (
         <div className="project-list">
             {
-              projectModels.map(model => <Project 
+              projectModels.map(model => <Project
+                key={model.name} 
                 name={model.name} 
                 description={model.description} 
               />)
